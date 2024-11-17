@@ -23,10 +23,10 @@ jobs:
 
     - name: Build RPM package
       run: |
-        cd /home/oneadie/rpmbuild/SPECS
+        cd ./rpmbuild/SPECS
         rpmbuild -ba count_files.spec
 
     - name: Build DEB package
       run: |
-        cd /home/oneadie/deb-package
+        cd ./deb-package
         dpkg-buildpackage -us -uc
